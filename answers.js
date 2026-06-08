@@ -14,3 +14,9 @@ let lastX = null;
 let lastY = null;
 let isShaking = null;
 let shakeTimeout = null;
+
+ball.addEventListener("mousemove", (event) => {
+  if (isShaking) return;
+  const currentX = event.clientX;
+  const currentY = event.clientY;
+});
