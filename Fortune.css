@@ -1,0 +1,13 @@
+.Fortune {
+  background: linear-gradient(to left, #8a00c2, #ee00ff);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 250px;
+  border-color: orange;
+  border-width: 5px;
+  border-radius: 30px;
+  font-size: large;
+}
