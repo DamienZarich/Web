@@ -7,3 +7,5 @@ const answers = [
   "My sources point to no",
   "Outlook is Good",
 ];
+const ball = document.getElementById("Eight-Ball");
+const answer = document.getElementById("text");
