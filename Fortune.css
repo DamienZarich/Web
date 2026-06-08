@@ -2,3 +2,7 @@
   background: linear-gradient(to left, #8a00c2, #ee00ff);
   color: white;
 }
+body {
+  background: linear-gradient(to left, #d600a1, #b111d9);
+  background-color: #8a00c2;
+}
