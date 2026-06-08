@@ -19,4 +19,14 @@ ball.addEventListener("mousemove", (event) => {
   if (isShaking) return;
   const currentX = event.clientX;
   const currentY = event.clientY;
+
+  if (lastX !== null && lastY !== null) {
+    const deltaX = Math.abs(currentX - lastX);
+    const deltaY = Math.abs(currentY - lastY);
+    const Speed = deltaX + deltaY;
+
+    if (Speed > 50) {
+      startShake();
+    }
+  }
 });
