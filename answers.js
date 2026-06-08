@@ -8,7 +8,7 @@ const answers = [
   "Outlook is Good",
 ];
 const ball = document.getElementById("Eight-Ball");
-const answer = document.getElementById("text");
+const answer = document.getElementById("TextAnswer");
 
 let lastX = null;
 let lastY = null;
@@ -29,4 +29,9 @@ ball.addEventListener("mousemove", (event) => {
       startShake();
     }
   }
+  lastX = currentX;
+  lastY = currentY;
 });
+function startShake() {
+  isShaking = true;
+}
