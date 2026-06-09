@@ -26,4 +26,9 @@ body {
   width: 300px;
   height: 300px;
   background: radial-gradient(circle at 30% 30%, #333, #000);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
