@@ -30,3 +30,10 @@ body {
   cursor: pointer;
   position: relative;
 }
+.Glass {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle at 50% 50%, #002244, #001122);
+  border-radius: 50%;
+  border: 4px solid #222;
+}
