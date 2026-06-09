@@ -50,3 +50,6 @@ body {
   text-shadow: 0 0 5px #0055ff;
   transition: opacity 0.3s ease;
 }
+.shake-animation {
+  animation: shake 0.5s ease infinite;
+}
