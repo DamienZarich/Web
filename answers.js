@@ -41,3 +41,9 @@ function startShake() {
     stopShake();
   }, 1000);
 }
+function stopShake() {
+  ball.classList.remove("shake-animation");
+
+  const randomIndex = Math.floor(Math.random() * answers.length);
+  const randomAnswer = answers[randomIndex];
+}
