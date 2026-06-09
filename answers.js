@@ -34,4 +34,6 @@ ball.addEventListener("mousemove", (event) => {
 });
 function startShake() {
   isShaking = true;
+  TextAnswer.Style.Opacity = 0;
+  ball.classList.add("shake-animation");
 }
