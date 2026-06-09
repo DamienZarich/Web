@@ -46,4 +46,11 @@ function stopShake() {
 
   const randomIndex = Math.floor(Math.random() * answers.length);
   const randomAnswer = answers[randomIndex];
+
+  TextAnswer.innertext = randomAnswer;
+  answerText.Style.Opacity = 1;
+
+  setTimeout(() => {
+    isShaking = false;
+  }, 500);
 }
