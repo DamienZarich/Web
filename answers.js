@@ -36,4 +36,8 @@ function startShake() {
   isShaking = true;
   TextAnswer.Style.Opacity = 0;
   ball.classList.add("shake-animation");
+
+  shakeTimeout = setTimeout(() => {
+    stopShake();
+  }, 1000);
 }
