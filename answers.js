@@ -8,7 +8,7 @@ const answers = [
   "Outlook is Good",
 ];
 const ball = document.getElementById("Eight-Ball");
-const answer = document.getElementById("TextAnswer");
+const textAnswer = document.getElementById("textAnswer");
 
 let lastX = null;
 let lastY = null;
@@ -16,6 +16,7 @@ let isShaking = null;
 let shakeTimeout = null;
 
 ball.addEventListener("mousemove", (event) => {
+  console.log("Mouse is moving over the ball!");
   if (isShaking) return;
   const currentX = event.clientX;
   const currentY = event.clientY;
@@ -34,7 +35,7 @@ ball.addEventListener("mousemove", (event) => {
 });
 function startShake() {
   isShaking = true;
-  TextAnswer.Style.Opacity = 0;
+  textAnswer.style.opacity = 0;
   ball.classList.add("shake-animation");
 
   shakeTimeout = setTimeout(() => {
@@ -47,8 +48,8 @@ function stopShake() {
   const randomIndex = Math.floor(Math.random() * answers.length);
   const randomAnswer = answers[randomIndex];
 
-  TextAnswer.innertext = randomAnswer;
-  answerText.Style.Opacity = 1;
+  textAnswer.innerText = randomAnswer;
+  textAnswer.style.opacity = 1;
 
   setTimeout(() => {
     isShaking = false;
