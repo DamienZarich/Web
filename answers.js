@@ -2,16 +2,23 @@ const answers = [
   "Reply Hazy",
   "It is Certain",
   "Ask Again Later",
-  "The answer is No",
+  "The Answer is No",
   "Yes",
-  "My sources point to no",
+  "My Sources Point to No",
   "Outlook is Good",
+  "Probably Not",
 ];
 function wiggle() {
   isShaking = true;
   ball.classList.add("wiggle-animation");
 }
 const goodAnswers = ["Yes", "It is Certain", "Outlook is Good"];
+const redoAnswers = ["Reply Hazy", "Ask Again Later"];
+const badAnswers = [
+  "The Answer is No",
+  "My Sources Point to No",
+  "Probably Not",
+];
 let totalMovement = 0;
 const ball = document.getElementById("Eight-Ball");
 const textAnswer = document.getElementById("textAnswer");
@@ -67,6 +74,14 @@ function stopShake() {
   }, 100);
   if (goodAnswers.includes(randomAnswer)) {
     glass.style.background =
-      "radial-gradient(circle at 50% 50%, #00ff66, #002208)";
+      "radial-gradient(circle at 50% 50%, #008120, #002208)";
+  } else if (redoAnswers.includes(randomAnswer)) {
+    glass.style.background =
+      "radial-gradient(circle at 50% 50%, #adcc00, #002208)";
+  } else if (badAnswers.includes(randomAnswer)) {
+    glass.style.background =
+      "radial-gradient(circle at 50% 50%, #b90000, #002208)";
+    glass.style.boxShadow =
+      "radial-gradient(circle at 50% 50%, #b90000, #15ff4b)";
   }
 }
