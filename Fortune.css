@@ -18,9 +18,9 @@ body {
     "Helvetica Neue",
     sans-serif;
 }
-.ball {
-  width: 600px;
-  height: 600px;
+.Ball {
+  width: 340px;
+  height: 340px;
   background: radial-gradient(circle at 30% 30%, #333, #000);
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(255, 248, 248, 0.5);

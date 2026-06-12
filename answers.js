@@ -11,9 +11,11 @@ function wiggle() {
   isShaking = true;
   ball.classList.add("wiggle-animation");
 }
+const goodAnswers = ["Yes", "It is Certain", "Outlook is Good"];
 let totalMovement = 0;
 const ball = document.getElementById("Eight-Ball");
 const textAnswer = document.getElementById("textAnswer");
+const glass = document.getElementById("glassPart");
 
 let lastX = null;
 let lastY = null;
@@ -63,6 +65,8 @@ function stopShake() {
   setTimeout(() => {
     isShaking = false;
   }, 100);
-}
-if (answers.includes("")) {
+  if (goodAnswers.includes(randomAnswer)) {
+    glass.style.background =
+      "radial-gradient(circle at 50% 50%, #00ff66, #002208)";
+  }
 }
