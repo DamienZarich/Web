@@ -84,6 +84,7 @@ ball.addEventListener("mousemove", (event) => {
 function startShake() {
   isShaking = true;
   textAnswer.style.opacity = 0;
+  triangle.style.opacity = 0;
   ball.classList.add("shake-animation");
 
   shakeStopout = setTimeout(() => {
@@ -98,6 +99,7 @@ function stopShake() {
 
   textAnswer.innerText = randomAnswer;
   textAnswer.style.opacity = 1;
+  triangle.style.opacity = 1;
 
   totalMovement = 0;
 
@@ -109,9 +111,11 @@ function stopShake() {
       "radial-gradient(circle at 50% 50%, #008120, #002208)";
     triangle.style.boxShadow =
       "0 0 60px 30px rgba(30, 151, 0, 0.8), inset 0 0 55px rgba(0, 255, 13, 0.4)";
+    triangle.style.rotate = "180deg";
   } else if (redoAnswers.includes(randomAnswer)) {
     triangle.style.background =
       "radial-gradient(circle at 50% 50%, #adcc00, #002208)";
+    triangle.style.rotate = "0deg";
     triangle.style.boxShadow =
       "0 0 60px 30px rgba(136, 151, 0, 0.6), inset 0 0 55px rgba(230, 255, 4, 0.4)";
   } else if (badAnswers.includes(randomAnswer)) {
@@ -119,5 +123,6 @@ function stopShake() {
       "radial-gradient(circle at 50% 50%, #b90000, #002208)";
     triangle.style.boxShadow =
       "0 0 60px 30px rgba(185, 0, 0, 0.6), inset 0 0 55px rgba(255, 0, 0, 0.4)";
+    triangle.style.rotate = "0deg";
   }
 }
