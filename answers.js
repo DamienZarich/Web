@@ -54,6 +54,7 @@ let totalMovement = 0;
 const ball = document.getElementById("Eight-Ball");
 const textAnswer = document.getElementById("StartText");
 const glass = document.getElementById("glassPart");
+const triangle = document.getElementById("triangle");
 
 let lastX = null;
 let lastY = null;
@@ -104,19 +105,19 @@ function stopShake() {
     isShaking = false;
   }, 100);
   if (goodAnswers.includes(randomAnswer)) {
-    glass.style.background =
+    triangle.style.background =
       "radial-gradient(circle at 50% 50%, #008120, #002208)";
-    glass.style.boxShadow =
+    triangle.style.boxShadow =
       "0 0 60px 30px rgba(30, 151, 0, 0.8), inset 0 0 55px rgba(0, 255, 13, 0.4)";
   } else if (redoAnswers.includes(randomAnswer)) {
-    glass.style.background =
+    triangle.style.background =
       "radial-gradient(circle at 50% 50%, #adcc00, #002208)";
-    glass.style.boxShadow =
+    triangle.style.boxShadow =
       "0 0 60px 30px rgba(136, 151, 0, 0.6), inset 0 0 55px rgba(230, 255, 4, 0.4)";
   } else if (badAnswers.includes(randomAnswer)) {
-    glass.style.background =
+    triangle.style.background =
       "radial-gradient(circle at 50% 50%, #b90000, #002208)";
-    glass.style.boxShadow =
+    triangle.style.boxShadow =
       "0 0 60px 30px rgba(185, 0, 0, 0.6), inset 0 0 55px rgba(255, 0, 0, 0.4)";
   }
 }
