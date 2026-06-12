@@ -38,6 +38,7 @@ body {
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
+  box-shadow: 20px 20px 200px rgba(140, 0, 255, 0.5);
 }
 .Answer {
   color: #4da6ff;

@@ -7,13 +7,19 @@ const answers = [
   "My sources point to no",
   "Outlook is Good",
 ];
+function wiggle() {
+  isShaking = true;
+  ball.classList.add("wiggle-animation");
+}
+let totalMovement = 0;
 const ball = document.getElementById("Eight-Ball");
 const textAnswer = document.getElementById("textAnswer");
 
 let lastX = null;
 let lastY = null;
-let isShaking = null;
-let shakeTimeout = null;
+let lastTime = null;
+let isShaking = false;
+let shakeStopout = null;
 
 ball.addEventListener("mousemove", (event) => {
   console.log("Mouse is moving over the ball!");
@@ -24,9 +30,10 @@ ball.addEventListener("mousemove", (event) => {
   if (lastX !== null && lastY !== null) {
     const deltaX = Math.abs(currentX - lastX);
     const deltaY = Math.abs(currentY - lastY);
-    const Speed = deltaX + deltaY;
 
-    if (Speed > 50) {
+    totalMovement += deltaX + deltaY;
+
+    if (totalMovement > 1000) {
       startShake();
     }
   }
@@ -38,7 +45,7 @@ function startShake() {
   textAnswer.style.opacity = 0;
   ball.classList.add("shake-animation");
 
-  shakeTimeout = setTimeout(() => {
+  shakeStopout = setTimeout(() => {
     stopShake();
   }, 1000);
 }
@@ -51,7 +58,11 @@ function stopShake() {
   textAnswer.innerText = randomAnswer;
   textAnswer.style.opacity = 1;
 
+  totalMovement = 0;
+
   setTimeout(() => {
     isShaking = false;
-  }, 500);
+  }, 100);
+}
+if (answers.includes("")) {
 }
