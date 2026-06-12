@@ -1,12 +1,24 @@
 const answers = [
-  "Reply Hazy",
-  "It is Certain",
-  "Ask Again Later",
-  "The Answer is No",
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
   "Yes",
-  "My Sources Point to No",
-  "Outlook is Good",
-  "Probably Not",
+  "Signs point to yes",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
 ];
 function wiggle() {
   isShaking = true;
@@ -21,7 +33,7 @@ const badAnswers = [
 ];
 let totalMovement = 0;
 const ball = document.getElementById("Eight-Ball");
-const textAnswer = document.getElementById("textAnswer");
+const textAnswer = document.getElementById("StartText");
 const glass = document.getElementById("glassPart");
 
 let lastX = null;
