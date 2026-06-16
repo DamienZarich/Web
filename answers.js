@@ -21,10 +21,10 @@ const answers = [
   "Very doubtful",
 ];
 function wiggle() {
-  isShaking = true;
+  isWiggle = true;
   ball.classList.add("wiggle-animation");
 }
-const shakeSound = new Audio("Magic8Audio.mp3");
+const shakeSound = new Audio("Magic8Sound.wav");
 const goodAnswers = [
   "It is certain",
   "It is decidedly so",
@@ -62,6 +62,7 @@ let lastY = null;
 let lastTime = null;
 let isShaking = false;
 let shakeStopout = null;
+let isWiggle = false;
 
 ball.addEventListener("mousemove", (event) => {
   console.log("Mouse is moving over the ball!");
@@ -87,7 +88,9 @@ function startShake() {
   textAnswer.style.opacity = 0;
   triangle.style.opacity = 0;
   ball.classList.add("shake-animation");
-
+  shakeSound.currentTime = 0;
+  shakeSound.play();
+  shakeSound.volume = 0.5;
   shakeStopout = setTimeout(() => {
     stopShake();
   }, 1000);
@@ -103,7 +106,7 @@ function stopShake() {
   triangle.style.opacity = 1;
 
   totalMovement = 0;
-
+  shakeSound.pause();
   setTimeout(() => {
     isShaking = false;
   }, 100);

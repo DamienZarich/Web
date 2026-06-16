@@ -72,7 +72,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 24px;
-  max-width: 130px;
+  max-width: 45%;
+  font-size: 1.2rem;
   line-height: 1.2;
   text-shadow:
     -1px -1px 0px #ffffff,
@@ -84,9 +85,11 @@ body {
   margin: 0;
   padding-top: 90px;
   transform: none;
+  word-wrap: break-word;
+  text-wrap: balance;
 }
 .wiggle-animation {
-  animation: wiggle 1s ease in;
+  animation: wiggle 3s ease-in-out;
 }
 
 @keyframes wiggle {
