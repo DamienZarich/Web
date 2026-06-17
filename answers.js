@@ -130,6 +130,7 @@ function stopShake() {
     triangle.style.boxShadow =
       "0 0 60px 30px rgba(136, 151, 0, 0.6), inset 0 0 55px rgba(230, 255, 4, 0.4)";
     textAnswer.style.paddingTop = "90px";
+    textAnswer.style.textShadow = " -1px -1px 0px yellow";
   } else if (badAnswers.includes(randomAnswer)) {
     triangle.style.background =
       "radial-gradient(circle at 50% 50%, #b90000, #002208)";
@@ -137,5 +138,6 @@ function stopShake() {
       "0 0 60px 30px rgba(185, 0, 0, 0.6), inset 0 0 55px rgba(255, 0, 0, 0.4)";
     triangle.style.rotate = "0deg";
     textAnswer.style.paddingTop = "90px";
+    textAnswer.style.textShadow = " -1px -1px 0px red";
   }
 }

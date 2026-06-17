@@ -136,3 +136,11 @@ body {
     transform: translate(0, 0);
   }
 }
+.triangle-wiggle {
+  animation: drift 1.5s ease-in-out;
+}
+@keyframes drift {
+  0% {
+    transform: rotate(0deg);
+  }
+}
