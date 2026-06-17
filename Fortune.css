@@ -89,31 +89,25 @@ body {
   text-wrap: balance;
 }
 .wiggle-animation {
-  animation: wiggle 10s infinite ease-in-out;
+  animation: wiggle 1s infinite ease-in-out;
 }
 
 @keyframes wiggle {
   0% {
     transform: translate(0, 0);
   }
-  20% {
-    transform: translate(5px, 5px);
+  25% {
+    transform: translate(5px, 0);
   }
-  40% {
-    transform: translate(5px, 5px);
+  50% {
+    transform: translate(0, 0);
   }
-  60% {
-    transform: translate(-5px, 5px);
-  }
-  80% {
-    transform: translate(5px, -5px);
+  75% {
+    transform: translate(0, 5px);
   }
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(0, 0);
   }
-}
-.shake-animation {
-  animation: shake 0.5s ease infinite;
 }
 
 @keyframes shake {
@@ -137,10 +131,16 @@ body {
   }
 }
 .triangle-wiggle {
-  animation: drift 1.5s ease-in-out;
+  animation: drift 10s ease-in-out;
 }
 @keyframes drift {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, -15px) rotate(30deg);
+  }
+  100% {
+    transform: translate(30px, 0) rotate(60deg);
   }
 }

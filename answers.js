@@ -20,6 +20,10 @@ const answers = [
   "Outlook not so good",
   "Very doubtful",
 ];
+function drift() {
+  isdrifting = true;
+  ball.classList.add("triangle-wiggle");
+}
 function wiggle() {
   isWiggle = true;
   ball.classList.add("wiggle-animation");
@@ -63,6 +67,7 @@ let lastTime = null;
 let isShaking = false;
 let shakeStopout = null;
 let isWiggle = false;
+let isdrifting = false;
 
 ball.addEventListener("mousemove", (event) => {
   console.log("Mouse is moving over the ball!");
@@ -85,6 +90,7 @@ ball.addEventListener("mousemove", (event) => {
 });
 function startShake() {
   ball.classList.remove("wiggle-animation");
+  ball.classList.remove("triangle-wiggle");
   isShaking = true;
   textAnswer.style.opacity = 0;
   triangle.style.opacity = 0;
@@ -99,6 +105,7 @@ function startShake() {
 function stopShake() {
   ball.classList.remove("shake-animation");
   ball.classList.add("wiggle-animation");
+  ball.classList.add("triangle-wiggle");
   const randomIndex = Math.floor(Math.random() * answers.length);
   const randomAnswer = answers[randomIndex];
 
