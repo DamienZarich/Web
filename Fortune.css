@@ -131,16 +131,22 @@ body {
   }
 }
 .triangle-wiggle {
-  animation: drift 10s ease-in-out;
+  animation: drift 15s ease-in-out;
 }
 @keyframes drift {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
-  50% {
+  25% {
     transform: translate(0, -15px) rotate(30deg);
   }
-  100% {
+  50% {
     transform: translate(30px, 0) rotate(60deg);
+  }
+  75% {
+    transform: translate(15px, -10px) rotate(45deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
