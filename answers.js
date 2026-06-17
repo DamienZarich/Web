@@ -84,6 +84,7 @@ ball.addEventListener("mousemove", (event) => {
   lastY = currentY;
 });
 function startShake() {
+  ball.classList.remove("wiggle-animation");
   isShaking = true;
   textAnswer.style.opacity = 0;
   triangle.style.opacity = 0;
@@ -97,7 +98,7 @@ function startShake() {
 }
 function stopShake() {
   ball.classList.remove("shake-animation");
-
+  ball.classList.add("wiggle-animation");
   const randomIndex = Math.floor(Math.random() * answers.length);
   const randomAnswer = answers[randomIndex];
 
@@ -121,6 +122,7 @@ function stopShake() {
       "0 0 60px 30px rgba(30, 151, 0, 0.8), inset 0 0 55px rgba(0, 255, 13, 0.4)";
     triangle.style.rotate = "180deg";
     textAnswer.style.paddingBottom = "180px";
+    textAnswer.style.textShadow = " -1px -1px 0px green";
   } else if (redoAnswers.includes(randomAnswer)) {
     triangle.style.background =
       "radial-gradient(circle at 50% 50%, #adcc00, #002208)";
